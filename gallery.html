@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galerie Produse Handmade — Ceramică, Textile, Lemn | Hand Made</title>
-  <meta name="description" content="Galeria noastră de produse handmade: ceramică, textile, bijuterii și obiecte din lemn. Filtrează și explorează creațiile artizanilor noștri." />
+  <meta name="description"
+    content="Galeria noastră de produse handmade: ceramică, textile, bijuterii și obiecte din lemn. Filtrează și explorează creațiile artizanilor noștri." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:wght@400;600;700&display=swap"
+    rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -23,226 +26,251 @@
       overflow: hidden;
       transition: transform 0.3s;
     }
-    .gallery-emoji:hover { transform: scale(1.03); }
-    .gallery-emoji .gallery-overlay { border-radius: 10px; }
+
+    .gallery-emoji:hover {
+      transform: scale(1.03);
+    }
+
+    .gallery-emoji .gallery-overlay {
+      border-radius: 10px;
+    }
   </style>
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">🧵 Hand Made</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto gap-1">
-        <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
-        <li class="nav-item"><a class="nav-link" href="products.html">Produse</a></li>
-        <li class="nav-item"><a class="nav-link" href="workshops.html">Ateliere</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">Despre noi</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Galerie</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="page-content">
-
-  <section class="section bg-bej" style="padding:60px 0 40px">
-    <div class="container text-center">
-      <h1 class="section-title">Galeria noastră</h1>
-      <div class="section-divider"></div>
-      <p class="section-subtitle">Explorează creațiile artizanilor Hand Made</p>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:40px">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
-
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">Toate</button>
-        <button class="filter-btn" data-filter="ceramica">🏺 Ceramică</button>
-        <button class="filter-btn" data-filter="textile">🧶 Textile</button>
-        <button class="filter-btn" data-filter="lemn">🪵 Lemn</button>
-        <button class="filter-btn" data-filter="bijuterii">💍 Bijuterii</button>
-      </div>
-
-      <!-- GALERIE MASONRY-LIKE -->
-      <div class="gallery-grid" id="galleryGrid">
-
-        <div class="gallery-item gallery-emoji" data-category="ceramica" style="height:200px" onclick="openLightbox('🏺','Vază rustică ceramică')">
-          <span style="font-size:4rem">🏺</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="textile" style="height:280px" onclick="openLightbox('🧶','Pernă țesută din lână')">
-          <span style="font-size:5rem">🧶</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="bijuterii" style="height:180px" onclick="openLightbox('💍','Cercei argint')">
-          <span style="font-size:3.5rem">💍</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="lemn" style="height:240px" onclick="openLightbox('🪵','Suport lumânare din nuc')">
-          <span style="font-size:4.5rem">🪵</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="ceramica" style="height:260px" onclick="openLightbox('☕','Set cești ceramice')">
-          <span style="font-size:4.5rem">☕</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="bijuterii" style="height:200px" onclick="openLightbox('📿','Colier pietre naturale')">
-          <span style="font-size:4rem">📿</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="textile" style="height:220px" onclick="openLightbox('🏮','Decor macramé perete')">
-          <span style="font-size:4rem">🏮</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="lemn" style="height:180px" onclick="openLightbox('🖼️','Ramă foto sculptată')">
-          <span style="font-size:3.5rem">🖼️</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="ceramica" style="height:200px" onclick="openLightbox('🫙','Borcan ceramică')">
-          <span style="font-size:4rem">🫙</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="bijuterii" style="height:250px" onclick="openLightbox('⌚','Brățară din piele și argint')">
-          <span style="font-size:4.5rem">⌚</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="textile" style="height:200px" onclick="openLightbox('🛋️','Covor mic macramé')">
-          <span style="font-size:4rem">🛋️</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="lemn" style="height:220px" onclick="openLightbox('🍽️','Platou servire din stejar')">
-          <span style="font-size:4rem">🍽️</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="ceramica" style="height:180px" onclick="openLightbox('🎨','Farfurie pictată')">
-          <span style="font-size:3.5rem">🎨</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="lemn" style="height:200px" onclick="openLightbox('🕯️','Suport lumânări triple')">
-          <span style="font-size:4rem">🕯️</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="bijuterii" style="height:240px" onclick="openLightbox('💎','Inel argint cu piatră')">
-          <span style="font-size:4.5rem">💎</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
-        <div class="gallery-item gallery-emoji" data-category="textile" style="height:200px" onclick="openLightbox('🪡','Eșarfă tricotată manual')">
-          <span style="font-size:4rem">🪡</span>
-          <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
-        </div>
-
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span>Hand Made</span>
+        <img src="./img/logo Hand-Made.png" alt="Hand Made" style="height:60px; object-fit:contain;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Produse</a></li>
+          <li class="nav-item"><a class="nav-link" href="workshops.html">Ateliere</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Despre noi</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Galerie</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
     </div>
-  </section>
+  </nav>
 
-</div>
+  <div class="page-content">
 
-<!-- LIGHTBOX -->
-<div class="lightbox-overlay" id="lightboxOverlay">
-  <button class="lightbox-close" id="lightboxClose">✕</button>
-  <div style="text-align:center;color:#fff">
-    <div id="lightboxEmoji" style="font-size:12rem;line-height:1"></div>
-    <p id="lightboxCaption" style="font-size:1.3rem;margin-top:20px;font-family:'Amatic SC',cursive;font-size:2rem"></p>
+    <section class="section bg-bej" style="padding:60px 0 40px">
+      <div class="container text-center">
+        <h1 class="section-title">Galeria noastră</h1>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Explorează creațiile artizanilor Hand Made</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:40px">
+      <div class="container">
+
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">Toate</button>
+          <button class="filter-btn" data-filter="ceramica">🏺 Ceramică</button>
+          <button class="filter-btn" data-filter="textile">🧶 Textile</button>
+          <button class="filter-btn" data-filter="lemn">🪵 Lemn</button>
+          <button class="filter-btn" data-filter="bijuterii">💍 Bijuterii</button>
+        </div>
+
+        <!-- GALERIE MASONRY-LIKE -->
+        <div class="gallery-grid" id="galleryGrid">
+
+          <div class="gallery-item" data-category="ceramica" style="background:#ffffff;"
+            onclick="openLightbox('./img.gallery/vaza din ceramica.png','Vază rustică ceramică')">
+            <img src="./img.gallery/vaza din ceramica.png" alt="vaza din ceramica"
+              style="width:100%; height:100%; object-fit:cover;">
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          <div class="gallery-item" data-category="ceramica" style="background:#ffffff;"
+            onclick="openLightbox('./img.gallery/Pernă țesută din lână.png','Pernă țesută din lână')">
+            <img src="./img.gallery/Pernă țesută din lână.png" alt="Pernă țesută din lână"
+              style="width:100%; height:100%; object-fit:cover;">
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          <div class="gallery-item" data-category="ceramica" style="background:#ffffff;"
+            onclick="openLightbox('./img.gallery/Pernă țesută din lână.png','Pernă țesută din lână')">
+            <img src="./img.gallery/Cercei argint (2).png" alt="Pernă țesută din lână"
+              style="width:100%; height:100%; object-fit:cover;">
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          
+
+          <div class="gallery-item" data-category="ceramica" style="background:#ffffff;"
+            onclick="openLightbox('./img.gallery/Set cești ceramice.png','Set cești ceramice')">
+            <img src="./img.gallery/Set cești ceramice.png" alt="Set cești ceramice"
+              style="width:100%; height:100%; object-fit:cover;">
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          <div class="gallery-item" data-category="ceramica" style="background:#ffffff;"
+            onclick="openLightbox('./img.gallery/Colier pietre naturale.png','Colier pietre naturale')">
+            <img src="./img.gallery/Colier pietre naturale.png" alt="Colier pietre naturale"
+              style="width:100%; height:100%; object-fit:cover;">
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          <div class="gallery-item" data-category="ceramica" style="background:#ffffff;"
+            onclick="openLightbox('./img.gallery/Suport macramé perete.png','Suport macramé perete')">
+            <img src="./img.gallery/Suport macramé perete.png" alt="suport macramé perete"
+              style="width:100%; height:100%; object-fit:cover;">
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          
+
+          <div class="gallery-item" data-category="ceramica" style="background:#ffffff;"
+            onclick="openLightbox('./img.gallery/Borcan ceramică.png','Borcan ceramică')">
+            <img src="./img.gallery/Borcan ceramică.png" alt="Borcan ceramică"
+              style="width:100%; height:100%; object-fit:cover;">
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          <div class="gallery-item" data-category="ceramica" style="background:#ffffff;"
+            onclick="openLightbox('./img.gallery/Brățară din piele și argint.png','Brățară din piele și argint')">
+            <img src="./img.gallery/Brățară din piele și argint.png" alt="Brățară din piele și argint"
+              style="width:100%; height:100%; object-fit:cover;">
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          <div class="gallery-item" data-category="ceramica" style="background:#ffffff;"
+            onclick="openLightbox('./img.gallery/Covor mic macramé.png','Covor mic macramé')">
+            <img src="./img.gallery/Covor mic macramé.png" alt="Covor mic macramé"
+              style="width:100%; height:100%; object-fit:cover;">
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          
+
+          <div class="gallery-item" data-category="ceramica" style="background:#ffffff;"
+            onclick="openLightbox('./img.gallery/Farfurie pictată.png','Farfurie pictată')">
+            <img src="./img.gallery/Farfurie pictată.png" alt="Farfurie pictată"
+              style="width:100%; height:100%; object-fit:cover;">
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          <div class="gallery-item" data-category="ceramica" style="background:#ffffff;"
+            onclick="openLightbox('./img.gallery/Suport lumânări triple.png','Suport lumânări triple')">
+            <img src="./img.gallery/Suport lumânări triple.png" alt="Suport lumânări triple"
+              style="width:100%; height:100%; object-fit:cover;">
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          <div class="gallery-item" data-category="ceramica" style="background:#ffffff;"
+            onclick="openLightbox('./img.gallery/Inel argint cu piatră.png','Inel argint cu piatră')">
+            <img src="./img.gallery/Inel argint cu piatră.png" alt="Inel argint cu piatră"
+              style="width:100%; height:100%; object-fit:cover;">
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </div>
-</div>
 
-<footer class="footer">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <h4>🧵 Hand Made</h4>
-        <p>Magazin de artizanat cu produse unice, create cu pasiune.</p>
-        <div class="social-links mt-3">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        </div>
-      </div>
-      <div class="col-md-2">
-        <h4>Pagini</h4>
-        <a href="index.html">Acasă</a>
-        <a href="products.html">Produse</a>
-        <a href="workshops.html">Ateliere</a>
-        <a href="about.html">Despre noi</a>
-        <a href="gallery.html">Galerie</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="col-md-3">
-        <h4>Categorii</h4>
-        <a href="products.html">Ceramică</a>
-        <a href="products.html">Textile</a>
-        <a href="products.html">Bijuterii</a>
-        <a href="products.html">Lemn</a>
-      </div>
-      <div class="col-md-3">
-        <h4>Contact</h4>
-        <p><i class="fas fa-map-marker-alt me-2"></i>Str. Artizanilor 12, Cahul</p>
-        <p><i class="fas fa-phone me-2"></i>+373 69 000 000</p>
-        <p><i class="fas fa-envelope me-2"></i>contact@handmade.md</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Hand Made. Toate drepturile rezervate.</p>
+  <!-- LIGHTBOX -->
+  <div class="lightbox-overlay" id="lightboxOverlay">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <div style="text-align:center;color:#fff">
+      <div id="lightboxEmoji" style="font-size:12rem;line-height:1"></div>
+      <p id="lightboxCaption" style="font-size:1.3rem;margin-top:20px;font-family:'Amatic SC',cursive;font-size:2rem">
+      </p>
     </div>
   </div>
-</footer>
 
-<button id="backToTop" aria-label="Înapoi sus"><i class="fas fa-arrow-up"></i></button>
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span>Hand Made</span>
+        <img src="./img/logo Hand-Made.png" alt="Hand Made" style="height:60px; object-fit:contain;">
+      </a>
+          <p>Magazin de artizanat cu produse unice, create cu pasiune.</p>
+          <div class="social-links mt-3">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h4>Pagini</h4>
+          <a href="index.html">Acasă</a>
+          <a href="products.html">Produse</a>
+          <a href="workshops.html">Ateliere</a>
+          <a href="about.html">Despre noi</a>
+          <a href="gallery.html">Galerie</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="col-md-3">
+          <h4>Categorii</h4>
+          <a href="products.html">Ceramică</a>
+          <a href="products.html">Textile</a>
+          <a href="products.html">Bijuterii</a>
+          <a href="products.html">Lemn</a>
+        </div>
+        <div class="col-md-3">
+          <h4>Contact</h4>
+          <p><i class="fas fa-map-marker-alt me-2"></i>Str. Artizanilor 12, Cahul</p>
+          <p><i class="fas fa-phone me-2"></i>+373 69 000 000</p>
+          <p><i class="fas fa-envelope me-2"></i>contact@handmade.md</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Hand Made. Toate drepturile rezervate.</p>
+      </div>
+    </div>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-<script src="js/main.js" defer></script>
-<script defer>
-  // Filtrare galerie
-  document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      const filter = this.dataset.filter;
-      document.querySelectorAll('.gallery-item').forEach(item => {
-        item.style.display = (filter === 'all' || item.dataset.category === filter) ? '' : 'none';
+  <button id="backToTop" aria-label="Înapoi sus"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script defer>
+    // Filtrare galerie
+    document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.gallery-item').forEach(item => {
+          item.style.display = (filter === 'all' || item.dataset.category === filter) ? '' : 'none';
+        });
       });
     });
-  });
 
-  // Lightbox cu emoji
-  function openLightbox(emoji, caption) {
-    document.getElementById('lightboxEmoji').textContent = emoji;
-    document.getElementById('lightboxCaption').textContent = caption;
-    document.getElementById('lightboxOverlay').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
+    // Lightbox cu emoji
+    function openLightbox(src, caption) {
+      document.getElementById('lightboxEmoji').innerHTML = '<img src="' + src + '" style="max-width:90vw; max-height:80vh; border-radius:10px;">';
+      document.getElementById('lightboxCaption').textContent = caption;
+      document.getElementById('lightboxOverlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
 
-  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-  document.getElementById('lightboxOverlay').addEventListener('click', function(e) {
-    if (e.target === this) closeLightbox();
-  });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightboxOverlay').addEventListener('click', function (e) {
+      if (e.target === this) closeLightbox();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
-  function closeLightbox() {
-    document.getElementById('lightboxOverlay').classList.remove('active');
-    document.body.style.overflow = '';
-  }
-</script>
+    function closeLightbox() {
+      document.getElementById('lightboxOverlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  </script>
 </body>
+
 </html>
